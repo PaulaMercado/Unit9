@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+           display:none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Form: focus and blur</h1>
+
+
+<div><label>Name
+    <input type="text" id="FirstName"/></label>
+    <p id="p1">This should now show you something</p>
+</div>
+
+<div><label>Hometown
+    <input type="text" id="Hometown" /></label>
+    <p id="p2">Where are you from?</p>
+</div>
+
+<div><label>School
+    <input type="text" id="School"/></label>
+    <p id="p3">Tell us where you went to school.</p>
+</div>
+
+<div><label>Work Experience
+    <input type="text" id="WorkExperience"/></label>
+    <p id="p4">What have you done?</p>
+</div>
+
+<script>
+
+    var displayText = function(elementId){
+        document.getElementById(elementId).style.display="inline";
+    };
+
+    var hideText = function(elementId){
+
+        document.getElementById(elementId).style.display="none";
+    };
+
+    document.getElementById("FirstName").onfocus =
+            function(){
+                displayText("p1");
+            }
+
+    document.getElementById("FirstName").onblur =
+            function(){
+                hideText("p1");
+            }
+
+    document.getElementById("Hometown").onfocus =
+            function(){
+                displayText("p2");
+            }
+
+    document.getElementById("Hometown").onblur =
+            function(){
+                hideText("p2");
+            }
+
+    document.getElementById("School").onfocus =
+            function(){
+                displayText("p3");
+            }
+
+    document.getElementById("School").onblur =
+            function(){
+                hideText("p3");
+            }
+
+    document.getElementById("WorkExperience").onfocus =
+            function(){
+                displayText("p4");
+            }
+
+    document.getElementById("WorkExperience").onblur =
+            function(){
+                hideText("p4");
+            }
+
+</script>
+</body>
+</html>
